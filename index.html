@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Book Library</title>
+
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+</head>
+
+<body>
+  <h1>Book Library</h1>
+
+  <div id="search-bar">
+    <input type="text" id="search-input" placeholder="Search...">
+    <button onclick="searchBooks()">Search</button>
+
+    <label for="sort-dropdown">Sort By:</label>
+    <select id="sort-dropdown" onchange="sortBooks()">
+      <option value="title">Title</option>
+      <option value="author">Author</option>
+      <option value="genre">Genre</option>
+      <option value="publicationDate">Publication Date</option>
+    </select>
+  </div>
+
+  <table id="book-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Publication Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="book-list"></tbody>
+
+  </table>
+
+  <table id="search-results-table">
+    <caption>Search Results</caption>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Publication Date</th>
+      </tr>
+    </thead>
+    <tbody id="result-list"></tbody>
+    <button type="button" id="home" onclick="goHome()">Home</button>
+
+  </table>
+
+  <button id="new-book-button" onclick="showNewBookForm()">Add New Book</button>
+
+  <div id="new-book-form">
+    <h2>Add New Book</h2>
+    <form onsubmit="addNewBook(event)">
+      <input type="text" id="title-input" placeholder="Title" required>
+      <input type="text" id="author-input" placeholder="Author" required>
+      <input type="text" id="genre-input" placeholder="Genre" required>
+      <input type="date" id="publication-date-input" required>
+      <button type="submit">Add Book</button>
+    </form>
+  </div>
+
+  <div id="update-book-form">
+    <h2>Update Book</h2>
+    <form onsubmit="updateBook(event)">
+      <input type="text" id="update-book-id" disabled>
+      <input type="text" id="update-title-input" placeholder="Title" required>
+      <input type="text" id="update-author-input" placeholder="Author" required>
+      <input type="text" id="update-genre-input" placeholder="Genre" required>
+      <input type="date" id="update-publication-date-input" required>
+      <button type="submit">Update Book</button>
+    </form>
+  </div>
+
+  <!-- <div id="login-form">
+    <h2>Login</h2>
+    <form onsubmit="loginOrRegister(event)">
+      <input type="text" id="login-email" placeholder="email" required>
+      <input type="password" id="login-password" placeholder="password" required>
+      <input type="radio" name="login-register" value="login" id="login-radio" checked>
+      <label for="login">Login</label><br>
+
+      <input type="radio" name="login-register" value="register" id="register-radio">
+      <label for="register">Register</label><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div> -->
+
+  <div id="login-form">
+    <h2>Login</h2>
+    <form onsubmit="loginOrRegister(event)">
+    <table>
+      <tr>
+        <td>Email</td>
+        <td><input type="text" id="login-email" placeholder="email" required></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td><input type="password" id="login-password" placeholder="password" required></td>
+      </tr>
+      <tr>
+        <td>Login or Register</td>
+        <td>
+          <input type="radio" name="login-register" value="login" id="login-radio" checked>
+          <label for="login-radio">Login</label>
+          <br>
+          <input type="radio" name="login-register" value="register" id="register-radio">
+          <label for="register-radio">Register</label>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="submit">Submit</button></td>
+      </tr>
+      <tr>
+        <td colspan="2" id="regMessage"></td>
+      </tr>
+    </table>
+  </form>
+  </div>
+  
+
+  <!-- <div id="register-form">
+    <h2>Register</h2>
+    <form onsubmit="login(event)">
+      <input type="text" id="register-email" placeholder="email" required>
+      <input type="password" id="register-password" placeholder="password" required>
+      <input type="radio" name="r" value="option1" id="option1">
+      <label for="option1">Option 1</label><br>
+
+      <input type="radio" name="option" value="option2" id="option2">
+      <label for="option2">Option 2</label><br>
+      <button type="submit">Register</button>
+    </form>
+  </div> -->
+
+  <!-- <h2>Login</h2> -->
+  <!-- <form id="loginForm">
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+    </div>
+    <div>
+      <button type="submit">Login</button>
+    </div>
+  </form> -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

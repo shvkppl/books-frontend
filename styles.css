@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  #book-table, #search-results-table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #book-table th,
+  #search-results-table th,
+  #book-table td,
+  #search-results-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+
+  #search-results-table {
+    display: none
+  }
+
+  #home {
+    display: none
+  }
+  
+  .delete-button,
+  .update-button,
+  button {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+
+  .update-button,
+  button {
+    background-color: #2196F3;
+  }
+  
+  #search-bar {
+    margin-top: 20px;
+  }
+  
+  #sort-dropdown {
+    margin-left: 10px;
+  }
+  
+  #new-book-form {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  #new-book-form input[type="text"],
+  #new-book-form input[type="date"] {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  #new-book-form button[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  #update-book-form {
+    display: none;
+    margin-top: 20px;
+  }
+
+  #login-form {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  #update-book-form input[type="text"],
+  #update-book-form input[type="date"] {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  #update-book-form button[type="submit"] {
+    background-color: #2196F3;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+  }
