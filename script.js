@@ -273,7 +273,7 @@ function showUpdateBookForm(book) {
     updateTitleInput.value = book.title;
     updateAuthorInput.value = book.author;
     updateGenreInput.value = book.genre;
-    updatePublicationDateInput.value = book.publicationDate;
+    updatePublicationDateInput.value = book.publication_date;
 
     const updateBookIdInput = document.getElementById("update-book-id");
     updateBookIdInput.value = book.id;
