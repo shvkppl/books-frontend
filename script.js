@@ -426,10 +426,6 @@ function loginOrRegister(event) {
 
 }
 
-// Function to generate a unique ID for a new book
-function generateId() {
-    return Math.random().toString(36).substr(2, 9);
-}
 
 function goHome() {
     const searchResults = document.getElementById("search-results-table");
